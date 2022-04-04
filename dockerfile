@@ -1,2 +1,2 @@
 FROM nginx
-CP . /var/www/html
+COPY . /var/www/html
