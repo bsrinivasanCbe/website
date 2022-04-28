@@ -1,0 +1,21 @@
+apiversion: apps/v1
+kind:Deployment
+metadata:
+  name:nginx-deployment
+  labels:
+    app: myapache2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapache2
+  template:
+    metadata:
+      labels:
+        app: myapache2
+    spec:
+      containers:
+        - name: myapache2
+          image: bsrinivasancbe/capstone2
+          ports: 
+            - containerPort: 80
